@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+</head>
+<body>
+    
+    <div class="container">
+
+        <form class="calculator">
+
+            <input type="text">
+
+            <span class="clear" onclick="clearAll()">AC</span>
+            <span onclick="clearLast()">C</span>
+            <span onclick="showDisplay('/')">&divide;</span>
+
+            <span onclick="showDisplay(7)">7</span>
+            <span onclick="showDisplay(8)">8</span>
+            <span onclick="showDisplay(9)">9</span>
+            <span onclick="showDisplay('*')">&times;</span>
+
+            <span onclick="showDisplay(4)">4</span>
+            <span onclick="showDisplay(5)">5</span>
+            <span onclick="showDisplay(6)">6</span>
+            <span onclick="showDisplay('-')">-</span>
+
+            <span onclick="showDisplay(1)">1</span>
+            <span onclick="showDisplay(2)">2</span>
+            <span onclick="showDisplay(3)">3</span>
+            <span onclick="showDisplay('+')">+</span>
+
+            <span onclick="showDisplay(0)">0</span>
+            <span onclick="doubleZero()">00</span>
+            <span onclick="showDisplay('.')">.</span>
+            <span onclick="calculate()">=</span>
+            
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
